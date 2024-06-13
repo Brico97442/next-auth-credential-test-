@@ -5,9 +5,9 @@ import React from 'react'
 
 const RegisterPage = () => {
     return (
-        <div>
+        <div className="p-6 max-w-[1000px] bg-red-400">
             <h1>Veulliez vous connecter</h1>
-            <form>
+            <form className='p-6 gap-2 flex flex-col'>
                 <Label htmlFor='firstname'>First Name</Label>
                 <Input id='firstname' name='firstname' type='text'/>
                 <Label htmlFor='lastname'>Last Name</Label>
