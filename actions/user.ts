@@ -2,6 +2,7 @@
 
 import connectDB from "@/lib/db";
 import { User } from '@/models/User'
+import { redirect } from "next/navigation";
 const register = async (formData: FormData) => {
     const firstName = formData.get('firstname') as string;
     const lastName = formData.get('lastname') as string;
@@ -20,6 +21,8 @@ const register = async (formData: FormData) => {
     await User.create({ firstName, lastName, email, password })
 
     console.log('Utilisateur crée avec succès')
+
+    redirect('/login')
 
 }
 
