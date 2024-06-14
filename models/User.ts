@@ -9,3 +9,5 @@ const userSchema = new mongoose.Schema({
     //Google and github provider
     authProviderId: { type: String },
 });
+
+export const User = mongoose.models?.User ||mongoose.model('User',userSchema);
